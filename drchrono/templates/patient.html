@@ -3,6 +3,13 @@
   <body>
     <h1>The DrChrono Kiosk!</h1>
     <h2>Patient Home</h2>
-    {{ form }}
+    <hr>
+    <p>If you have an appointment, fill out this form to confirm who you are.
+    <form action='.' method='post'>{% csrf_token %}
+        {{ form }}
+        <input type='submit' value='Submit'/>
+    </form>
+    <hr>
+    <a href="{% url 'doctor_page' %}">Doctor's page</a>
   </body>
 </html>

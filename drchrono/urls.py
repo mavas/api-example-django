@@ -10,7 +10,6 @@ urlpatterns = [
     url(r'^$', views.home, name='home'),
     #url(r'^oauth2callback$', views.auth_return),
     url(r'^oauth2callback2/$', views.oauth2callback),
-    url(r'^doctor/$', views.doctor),
+    url(r'^doctor/$', views.doctor, name='doctor_page'),
     url(r'', include('social.apps.django_app.urls', namespace='social')),
 ]
-

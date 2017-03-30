@@ -2,5 +2,11 @@
 <html>
   <body>
     <h1>Doctor's Page</h1>
+    <hr>
+    <h2>Today's appointments</h2>
+    {% for a in appointments %}
+        <p>{{ a }}
+    {% endfor %}
+    <hr>
   </body>
 </html>
