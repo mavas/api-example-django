@@ -1,12 +1,12 @@
-<!DOCTYPE html>
-<html>
-  <body>
-    <h1>The DrChrono Kiosk!</h1>
+{% extends "base.html" %}
+
+{% block title %}Home{% endblock %}
+{% block content %}
+    <h2>Homepage</h2>
     <p>A doctor can login to setup the kiosk, such that patients can then use it to accomplish tasks.  Yep!
 
     <p>You can use this application; you should authenticate yourself, and you can do this by being redirected to DrChrono's web site, logging in, and you'll be redirected back here.
     <a href="{% url 'social:begin' 'drchrono' %}">
       Authenticate
     </a>
-  </body>
-</html>
+{% endblock %}

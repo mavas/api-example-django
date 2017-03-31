@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>{% block title %}{% endblock %}</title>
+    </head>
+    <body>
+    <center>
+    <table width=700>
+    <tr><td>
+        <h1><a href="{% url 'home' %}">DrChrono Checkin Kiosk!</a><h1>
+        {% block content %}{% endblock %}
+        <hr>
+        <a href="{% url 'doctor_page' %}">Doctor's page</a>
+    </td></tr>
+    </center>
+    </body>
+</html>

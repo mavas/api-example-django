@@ -1,12 +1,18 @@
-<!DOCTYPE html>
-<html>
-  <body>
-    <h1>Doctor's Page</h1>
+{% extends "base.html" %}
+
+{% block title %}Dr's Page{% endblock %}
+{% block content %}
+    <h2>Doctor's Page</h2>
+
     <hr>
-    <h2>Today's appointments</h2>
-    {% for a in appointments %}
-        <p>{{ a }}
-    {% endfor %}
+        <h2>Appointments Checked-in</h2>
+        {% for a in appointments_checked_in %}
+            <p>{{ a }}
+        {% endfor %}
     <hr>
-  </body>
-</html>
+        <h2>Today's appointments</h2>
+        {% for a in appointments %}
+            <p>{{ a }}
+        {% endfor %}
+    <hr>
+{% endblock %}

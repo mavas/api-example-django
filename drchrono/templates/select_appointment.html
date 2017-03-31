@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+
+{% block title %}Select Appointment{% endblock %}
+{% block content %}
+    <h2>Select Appointment</h2>
+    <p>Select an appointment to check-in to.
+
+    <form action='select_appointment/{{ patient_id }}/' method='post'>{% csrf_token %}
+        {% for a in appointments %}
+            <p><input type="radio" name="appointment" value="{{ a.id }}">{{ a.scheduled_time }}</input>
+        {% endfor %}
+        <p><input type='submit' value='Submit'/>
+    </form>
+{% endblock %}

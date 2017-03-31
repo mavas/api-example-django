@@ -1,15 +1,12 @@
-<!DOCTYPE html>
-<html>
-  <body>
-    <h1>The DrChrono Kiosk!</h1>
+{% extends "base.html" %}
+
+{% block title %}Patient Home{% endblock %}
+{% block content %}
     <h2>Patient Home</h2>
     <hr>
     <p>If you have an appointment, fill out this form to checkin (and confirm who you are).
     <form action='.' method='post'>{% csrf_token %}
-        {{ form }}
+        {{ form.as_p }}
         <input type='submit' value='Submit'/>
     </form>
-    <hr>
-    <a href="{% url 'doctor_page' %}">Doctor's page</a>
-  </body>
-</html>
+{% endblock %}

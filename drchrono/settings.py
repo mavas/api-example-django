@@ -23,7 +23,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = '=*l&a&rk7jmiw$3euke*z9lu-na!^j^i&ddejfik!ajqlaymmc'
 
 SOCIAL_AUTH_DRCHRONO_KEY = '5lY0IGRQAYh3TcHigwE56qQfZEUDs5kGzMwx1AHL'
-LOGIN_REDIRECT_URL = 'http://localhost:8000/oauth2callback2/'
+LOGIN_REDIRECT_URL = 'http://localhost:8000/patient_home/'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -103,7 +103,7 @@ TIME_ZONE = 'UTC'
 
 USE_I18N = True
 
-USE_L10N = True
+USE_L10N = False
 
 USE_TZ = True
 
