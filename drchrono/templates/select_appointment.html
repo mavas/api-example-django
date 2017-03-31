@@ -7,7 +7,7 @@
 
     <form action='select_appointment/{{ patient_id }}/' method='post'>{% csrf_token %}
         {% for a in appointments %}
-            <p><input type="radio" name="appointment" value="{{ a.id }}">{{ a.scheduled_time }}</input>
+            <p><input type="radio" name="appointment" value="{{ a.id }}">{{ a.scheduled_time }} ({{ a.id }})</input>
         {% endfor %}
         <p><input type='submit' value='Submit'/>
     </form>

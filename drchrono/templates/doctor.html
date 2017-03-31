@@ -6,9 +6,12 @@
 
     <hr>
         <h2>Appointments Checked-in</h2>
-        {% for a in appointments_checked_in %}
-            <p>{{ a }}
-        {% endfor %}
+        <form action='.' method='post'>
+            {% for a in appointments_checked_in %}
+                <p><input type="radio" name="patient" value="{{ a.id }}">{{ a }}</input>
+            {% endfor %}
+            <input type='submit' value='See patient'/>
+        </form>
     <hr>
         <h2>Today's appointments</h2>
         {% for a in appointments %}

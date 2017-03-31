@@ -11,5 +11,6 @@ urlpatterns = [
     url(r'^patient_checkin/(?P<appointment_id>.+)$', views.patient_checkin, name='patient_checkin'),
     url(r'^select_appointment/(?P<patient_id>.+)$', views.select_appointment, name='select_appointment'),
     url(r'^doctor/$', views.doctor, name='doctor_page'),
+    url(r'^clear_session/$', views.clear_session, name='clear_session'),
     url(r'', include('social.apps.django_app.urls', namespace='social')),
 ]

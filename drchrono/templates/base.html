@@ -5,12 +5,18 @@
     </head>
     <body>
     <center>
+    {% if messages %}
+        {% for message in messages %}
+        <li{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
+        {% endfor %}
+    {% endif %}
     <table width=700>
     <tr><td>
         <h1><a href="{% url 'home' %}">DrChrono Checkin Kiosk!</a><h1>
         {% block content %}{% endblock %}
         <hr>
         <a href="{% url 'doctor_page' %}">Doctor's page</a>
+        <br><a href="{% url 'clear_session' %}">Clear session</a>
     </td></tr>
     </center>
     </body>

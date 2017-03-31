@@ -20,7 +20,7 @@ class PatientCheckinForm(forms.Form):
         ('Lojban', 'jbo'),
         ('English', 'en'),
     )
-    dob = forms.DateField(required=False)
+    dob = forms.DateField(label='Date of birth', required=False)
     email = forms.EmailField()
     gender = forms.ChoiceField(choices=GENDERS)
     address_street_first = forms.CharField()
